@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>SQL Problems Batch 1</title>
+    <meta name="description" content="A series of SQL practice problems">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/dracula.min.css" id="theme">
+    
+    <style>
+        .problem-container {
+            text-align: left;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 5px solid #bd93f9;
+        }
+        .sql-schema {
+            font-size: 0.6em;
+            color: #8be9fd;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="reveal">
+        <div class="slides">
+
+            <section>
+                <h1>SQL Practice</h1>
+                <h3>6 Independent Database Challenges</h3>
+                <p>
+                    <small>Navigate using the arrow keys</small>
+                </p>
+                <p class="sql-schema">
+                    Available Tables: Authors, Books, Members, Loans
+                </p>
+            </section>
+
+            <section>
+                <h2>Problem 1</h2>
+                <div class="problem-container">
+                    <p><strong>Task:</strong> Create a new table.</p>
+                    <p>Write a SQL query to create a table named <code>Publishers</code>. The table should have the following columns:</p>
+                    <ul>
+                        <li><code>publisher_id</code> (Integer, Primary Key)</li>
+                        <li><code>name</code> (Variable character up to 100 length)</li>
+                        <li><code>city</code> (Variable character up to 50 length)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Problem 2</h2>
+                <div class="problem-container">
+                    <p><strong>Task:</strong> Filter and Sort.</p>
+                    <p>Write a SQL query to select the <code>title</code> and <code>publish_year</code> from the <code>Books</code> table where the publish year is between <strong>1990</strong> and <strong>2000</strong>.</p>
+                    <p>Order the final results by <code>publish_year</code> in <strong>descending</strong> order.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Problem 3</h2>
+                <div class="problem-container">
+                    <p><strong>Task:</strong> Combine Tables.</p>
+                    <p>Write a SQL query to retrieve a list of all book titles alongside the names of the authors who wrote them.</p>
+                    <p>Your result set should display the <code>title</code> from the <code>Books</code> table and the <code>name</code> from the <code>Authors</code> table.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Problem 4</h2>
+                <div class="problem-container">
+                    <p><strong>Task:</strong> Aggregation and Sorting.</p>
+                    <p>Write a SQL query to calculate the <strong>average price</strong> of books written by each author.</p>
+                    <p>Display the <code>author_id</code> and the calculated average price. Order the results by the average price from highest to lowest.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Problem 5</h2>
+                <div class="problem-container">
+                    <p><strong>Task:</strong> Filter against an aggregate.</p>
+                    <p>Write a SQL query to find the <code>title</code> and <code>price</code> of all books that cost strictly more than the overall average price of all books in the database.</p>
+                    <p><em>Note: You <strong>must</strong> use a subquery to solve this problem!</em></p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Problem 6</h2>
+                <div class="problem-container">
+                    <p><strong>Task:</strong> Data Modification.</p>
+                    <p>A new member has just joined the library.</p>
+                    <p>Write a SQL query to <strong>INSERT</strong> the following record into the <code>Members</code> table:</p>
+                    <ul>
+                        <li><strong>member_id:</strong> 9999</li>
+                        <li><strong>name:</strong> 'Jane Doe'</li>
+                        <li><strong>join_date:</strong> '2023-10-01'</li>
+                        <li><strong>status:</strong> 'Active'</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section>
+                <h2>End of Quiz</h2>
+                <p>Review your queries and test them against the sample database.</p>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            slideNumber: true,
+            transition: 'slide' // none/fade/slide/convex/concave/zoom
+        });
+    </script>
+</body>
+</html>
