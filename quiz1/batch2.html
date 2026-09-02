@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>SQL Problems Batch 2</title>
+    <meta name="description" content="SQL Practice Problems - Batch 2">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/blood.min.css" id="theme">
+    
+    <style>
+        .problem-container {
+            text-align: left;
+            background: rgba(255, 255, 255, 0.07);
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 5px solid #a83232;
+        }
+        .sql-schema {
+            font-size: 0.6em;
+            color: #ffb3b3;
+            margin-bottom: 20px;
+        }
+        code {
+            color: #ff8080;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="reveal">
+        <div class="slides">
+
+            <section>
+                <h1>SQL Problems Batch 2</h1>
+                <h3>Database Assessment Series</h3>
+                <p>
+                    <small>Navigate using the arrow keys</small>
+                </p>
+                <p class="sql-schema">
+                    Available Tables: Customers, Categories, Products, Orders
+                </p>
+            </section>
+
+            <section>
+                <h2>Problem 1</h2>
+                <div class="problem-container">
+                    <p><strong>Task:</strong> DDL Table Creation.</p>
+                    <p>Write a SQL query to create a table named <code>Reviews</code> with the following schema:</p>
+                    <ul>
+                        <li><code>review_id</code> (Integer, Primary Key)</li>
+                        <li><code>product_id</code> (Integer, Foreign Key referencing Products)</li>
+                        <li><code>rating</code> (Integer)</li>
+                        <li><code>comment_text</code> (Variable character up to 255 length)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Problem 2</h2>
+                <div class="problem-container">
+                    <p><strong>Task:</strong> Pattern Matching and Sorting.</p>
+                    <p>Write a SQL query to select the <code>product_name</code> and <code>price</code> from the <code>Products</code> table for all products whose name contains the word <strong>'Board'</strong> or <strong>'Chair'</strong> using a pattern match (<code>LIKE</code>).</p>
+                    <p>Order the results by <code>price</code> in <strong>descending</strong> order.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Problem 3</h2>
+                <div class="problem-container">
+                    <p><strong>Task:</strong> Relational Join.</p>
+                    <p>Write a SQL query to retrieve all product names alongside their respective category names.</p>
+                    <p>Display the <code>product_name</code> from the <code>Products</code> table and the <code>category_name</code> from the <code>Categories</code> table.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Problem 4</h2>
+                <div class="problem-container">
+                    <p><strong>Task:</strong> Aggregation and Ranking.</p>
+                    <p>Write a SQL query to find the total money spent by each customer across all their orders.</p>
+                    <p>Display the <code>customer_id</code> and the calculated total sum of <code>total_amount</code>. Order the final output by the total sum from <strong>highest to lowest</strong>.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Problem 5</h2>
+                <div class="problem-container">
+                    <p><strong>Task:</strong> Subquery Filtering.</p>
+                    <p>Write a SQL query to retrieve the <code>first_name</code> and <code>last_name</code> of all customers who have placed an order with a <code>total_amount</code> greater than the average total order amount.</p>
+                    <p><em>Note: Subquerying is required to solve this problem!</em></p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Problem 6</h2>
+                <div class="problem-container">
+                    <p><strong>Task:</strong> Data Modification.</p>
+                    <p>A storewide sale gives a discount to all items in category 1.</p>
+                    <p>Write a SQL query using <strong>UPDATE</strong> to reduce the <code>price</code> of all products in the <code>Products</code> table by <strong>10%</strong> where the <code>category_id</code> is equal to 1.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>End of Quiz</h2>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            slideNumber: true,
+            transition: 'fade'
+        });
+    </script>
+</body>
+</html>
