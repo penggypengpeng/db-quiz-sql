@@ -53,7 +53,7 @@
                         <li><code>review_id</code> (Integer, Primary Key)</li>
                         <li><code>product_id</code> (Integer, Foreign Key referencing Products)</li>
                         <li><code>rating</code> (Integer)</li>
-                        <li><code>comment_text</code> (Variable character up to 255 length)</li>
+                        <li><code>comment_text</code> (up to 255 length)</li>
                     </ul>
                 </div>
             </section>
@@ -62,7 +62,7 @@
                 <h2>Problem 2</h2>
                 <div class="problem-container">
                     <p><strong>Task:</strong> Pattern Matching and Sorting.</p>
-                    <p>Write a SQL query to select the <code>product_name</code> and <code>price</code> from the <code>Products</code> table for all products whose name contains the word <strong>'Board'</strong> or <strong>'Chair'</strong> using a pattern match (<code>LIKE</code>).</p>
+                    <p>Write a SQL query to select the <code>product_name</code> and <code>price</code> from the <code>Products</code> table for all products whose name <strong></strong>contains</strong> the word <strong>'Board'</strong> or <strong>'Chair'</strong>.</p>
                     <p>Order the results by <code>price</code> in <strong>descending</strong> order.</p>
                 </div>
             </section>
@@ -71,8 +71,8 @@
                 <h2>Problem 3</h2>
                 <div class="problem-container">
                     <p><strong>Task:</strong> Relational Join.</p>
-                    <p>Write a SQL query to retrieve all product names alongside their respective category names.</p>
-                    <p>Display the <code>product_name</code> from the <code>Products</code> table and the <code>category_name</code> from the <code>Categories</code> table.</p>
+                    <p>Write a SQL query to retrieve all order_id alongside the first_name of the customers that ordered.</p>
+                    <p>Display the <code>order_id</code> from the <code>Orders</code> table and the <code>first_name</code> from the <code>Customers</code> table.</p>
                 </div>
             </section>
 
@@ -99,7 +99,16 @@
                 <div class="problem-container">
                     <p><strong>Task:</strong> Data Modification.</p>
                     <p>A storewide sale gives a discount to all items in category 1.</p>
-                    <p>Write a SQL query using <strong>UPDATE</strong> to reduce the <code>price</code> of all products in the <code>Products</code> table by <strong>10%</strong> where the <code>category_id</code> is equal to 1.</p>
+                    <p>Write a SQL query using <strong>UPDATE</strong> to reduce the <code>price</code> of all products in the <code>Products</code> table by <strong>10%</strong> where the <code>category</code> is equal to <code>'Electronics'</code>.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Problem 7</h2>
+                <div class="problem-container">
+                    <p><strong>Task:</strong> Subquery Filtering.</p>
+                    <p>Write a SQL query to retrieve the <code>product_id</code> and <code>name</code> of all products whose <code>stock_quantity</code> is strictly greater than the average <code>stock_quantity</code>.</p>
+                    <p><em>Note: Subquerying is required to solve this problem!</em></p>
                 </div>
             </section>
 

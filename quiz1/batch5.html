@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>SQL Problems Batch 5</title>
+    <meta name="description" content="SQL Practice Problems - Batch 5">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Reveal.js CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/moon.min.css" id="theme">
+    
+    <style>
+        .problem-container {
+            text-align: left;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 5px solid #26a69a;
+        }
+        .sql-schema {
+            font-size: 0.6em;
+            color: #80cbc4;
+            margin-bottom: 20px;
+        }
+        code {
+            color: #80cbc4;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- Title Slide -->
+            <section>
+                <h1>SQL Problems Batch 5</h1>
+                <h3>Fitness Center Database Challenges</h3>
+                <p>
+                    <small>Navigate using the arrow keys</small>
+                </p>
+                <p class="sql-schema">
+                    Available Tables: Trainers, Members, Classes, Bookings
+                </p>
+            </section>
+
+            <!-- Problem 1: Table Creation -->
+            <section>
+                <h2>Problem 1</h2>
+                <div class="problem-container">
+                    <p><strong>Task:</strong> DDL Table Creation.</p>
+                    <p>Write a SQL query to create a new table named <code>Equipment</code> with the following specifications:</p>
+                    <ul>
+                        <li><code>equipment_id</code> (Integer, Primary Key)</li>
+                        <li><code>equipment_name</code> (String up to 100 length)</li>
+                        <li><code>category</code> (String up to 50 length)</li>
+                        <li><code>purchase_date</code> (Date)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Problem 2: Simple SELECT with LIKE & ORDER BY -->
+            <section>
+                <h2>Problem 2</h2>
+                <div class="problem-container">
+                    <p><strong>Task:</strong> Pattern Matching and Sorting.</p>
+                    <p>Write a SQL query to select the <code>name</code>, <code>membership_tier</code>, and <code>email</code> from the <code>Members</code> table for all members whose email domain ends with <strong>'@gmail.com'</strong>.</p>
+                    <p>Order the results by <code>name</code> in <strong>ascending</strong> alphabetical order.</p>
+                </div>
+            </section>
+
+            <!-- Problem 3: Multi-relation SELECT (JOIN) -->
+            <section>
+                <h2>Problem 3</h2>
+                <div class="problem-container">
+                    <p><strong>Task:</strong> Multi-Table Join.</p>
+                    <p>Write a SQL query to retrieve a list of all class names alongside the names of the trainers teaching them.</p>
+                    <p>Display the <code>class_name</code> from the <code>Classes</code> table and the <code>name</code> from the <code>Trainers</code> table.</p>
+                </div>
+            </section>
+
+            <!-- Problem 4: Aggregate Function with ORDER BY -->
+            <section>
+                <h2>Problem 4</h2>
+                <div class="problem-container">
+                    <p><strong>Task:</strong> Aggregation and Grouping.</p>
+                    <p>Write a SQL query to calculate the total number of bookings made for each class.</p>
+                    <p>Select the <code>class_id</code> and the calculated total count of bookings from the <code>Bookings</code> table. Order the results by the total count from <strong>highest to lowest</strong>.</p>
+                </div>
+            </section>
+
+            <!-- Problem 5: Subquery -->
+            <section>
+                <h2>Problem 5</h2>
+                <div class="problem-container">
+                    <p><strong>Task:</strong> Subquery Filtering.</p>
+                    <p>Write a SQL query to find the <code>class_name</code> and <code>fee</code> of all classes that cost strictly more than the overall average class fee.</p>
+                    <p><em>Note: Subquerying is required to solve this problem!</em></p>
+                </div>
+            </section>
+
+            <!-- Problem 6: DELETE Statement -->
+            <section>
+                <h2>Problem 6</h2>
+                <div class="problem-container">
+                    <p><strong>Task:</strong> Data Removal.</p>
+                    <p>The system needs to clear out all cancelled class bookings.</p>
+                    <p>Write a SQL query to remove all records from the <code>Bookings</code> table where the <code>attendance_status</code> is equal to <strong>'Cancelled'</strong>.</p>
+                </div>
+            </section>
+
+            <!-- End Slide -->
+            <section>
+                <h2>End of Quiz</h2>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Reveal.js JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            slideNumber: true,
+            transition: 'slide'
+        });
+    </script>
+</body>
+</html>
